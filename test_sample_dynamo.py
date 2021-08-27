@@ -1,10 +1,11 @@
 from moto import mock_dynamodb2
 from tests.dynamo_test_data import definition_mock_dynamo_table, test_data_01
 from boto3.dynamodb.conditions import Attr, Key
-from app.sample_main import moto_dynamo_sample_main
+from app.sample_dynamo import moto_dynamo_sample_main
 
 
 class TestSample:
+    # 参考：https://obataka.com/moto-dynamodb/
 
     @mock_dynamodb2
     def test_motoでdynamodbをモックで使用する(self):
